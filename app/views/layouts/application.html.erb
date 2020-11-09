@@ -12,14 +12,10 @@
   <body>
   <%= link_to 'Create a Todo', new_todo_path %>
   <%= link_to 'All Todos', todos_path %>
-  <a href="/home">Home</a>
-  <a href="/about">About</a>
-  <a href="/help">help</a>
-  <% flash.each do |name, msg| %>
-    <ul>
-      <li><%= msg %></li>
-    </ul>
-  <% end %>
+  <%= link_to 'Home', home_path %>
+  <%= link_to 'About', about_path %>
+  <%= link_to 'help', help_path %>
+  <%= render 'layouts/messages' %>
     <%= yield %>
   </body>
 </html>
