@@ -1,5 +1,9 @@
 <h2>Edit todo</h2>
 
+<p>
+<%= link_to 'Back', todos_path %>
+</p>
+
 <% if @todo.errors.any? %>
     <h2>Todo was not saved. Errors:</h2>
     <ul>

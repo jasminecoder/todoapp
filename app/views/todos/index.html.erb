@@ -1,1 +1,31 @@
 <h2> All todos </h2>
+<p>
+    <%= link_to 'Create A Todo', new_todo_path %>
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @todos.each do |todo| %>
+    <tr>
+      <td><%= todo.id %></td>
+      <td><%= todo.name %></td>
+      <td><%= todo.description %></td>
+      <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
+      <td><%= link_to 'Show', todo_path(todo) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
